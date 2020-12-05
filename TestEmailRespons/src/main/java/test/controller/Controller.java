@@ -18,8 +18,8 @@ public class Controller {
 	
 	@GetMapping("/response")
 	public void response(HttpServletRequest request, HttpServletResponse response) {
-		BufferedImage pixel = new BufferedImage(0, 0, BufferedImage.TYPE_INT_RGB);
-//		pixel.setRGB(0, 0, (0xFF));
+		BufferedImage pixel = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
+		pixel.setRGB(0, 0, (0x00));
 		response.setContentType("image/png");
 		OutputStream os;
 		try {
