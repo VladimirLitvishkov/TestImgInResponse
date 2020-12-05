@@ -1,5 +1,7 @@
 package test.controller;
 
+import java.awt.image.BufferedImage;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,7 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 	
 	@GetMapping("/response")
-	public void response() {
+	public BufferedImage response() {
+		BufferedImage pixel = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
+		pixel.setRGB(0, 0, (0xFF));
+		return pixel;
 	}
 
 }
