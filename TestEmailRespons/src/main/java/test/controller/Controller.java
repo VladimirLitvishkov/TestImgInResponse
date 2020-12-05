@@ -21,6 +21,7 @@ public class Controller {
 	@GetMapping("/response")
 	public void response(HttpServletRequest request, HttpServletResponse response) {
 		BufferedImage pixel = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
+//		pixel.setRGB(0, 0, 000);
 		pixel.setRGB(0, 0, Color.WHITE.getRGB());
 		response.setContentType("image/png");
 		OutputStream os;
