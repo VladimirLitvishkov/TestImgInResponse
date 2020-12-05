@@ -12,8 +12,8 @@ public class Controller {
 	
 	@GetMapping("/response")
 	public BufferedImage response() {
-		BufferedImage pixel = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
-		pixel.setRGB(0, 0, (0xFF));
+		BufferedImage pixel = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
+//		pixel.setRGB(0, 0, (0xFF));
 		return pixel;
 	}
 
