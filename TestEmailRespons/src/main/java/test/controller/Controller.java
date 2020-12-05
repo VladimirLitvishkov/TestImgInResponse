@@ -1,5 +1,6 @@
 package test.controller;
 
+import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.awt.image.IndexColorModel;
 import java.io.IOException;
@@ -20,7 +21,7 @@ public class Controller {
 	@GetMapping("/response")
 	public void response(HttpServletRequest request, HttpServletResponse response) {
 		BufferedImage pixel = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
-		pixel.setRGB(0, 0, (0xFF));
+		pixel.setRGB(0, 0, Color.WHITE.getRGB());
 		response.setContentType("image/png");
 		OutputStream os;
 		try {
